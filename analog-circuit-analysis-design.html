@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111618">
+  
+  <title>Analog Circuit Analysis, Design &amp; Testing | DTU Workshop | AAKASH</title>
+  <meta name="description" content="Technical case study of the 2-day workshop on Analog Circuit Analysis, Design and Testing at Delhi Technological University. Exploring Design-Oriented Analysis (DOA), Middlebrook's EET, thermal BJT biasing, and audio amplifier design.">
+  <meta name="keywords" content="Analog Circuit Design, Design-Oriented Analysis, DOA, Middlebrook EET, BJT Biasing, Emitter Degeneration, DTU ECE, Delhi Technological University, Low-Entropy Expressions, Audio Amplifier">
+  <meta name="author" content="AAKASH">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Analog Circuit Analysis, Design &amp; Testing | DTU ECE Workshop">
+  <meta property="og:description" content="Mastering Design-Oriented Analysis (DOA), Middlebrook's Extra Element Theorem, and BJT amplifier design at Delhi Technological University.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="assets/analog-workshop-brochure.png">
+  
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=20261117-1">
+  <link rel="stylesheet" href="analog-workshop.css?v=20261117-1">
+  <script src="site-interactions.js?v=20261117-1" defer></script>
+  <script src="analog-workshop.js?v=20261117-1" defer></script>
+
+  <link rel="stylesheet" href="site-polish.css?v=20261117-1">
+  <link rel="stylesheet" href="site-motion.css?v=20261120-cursor3">
+  <script src="site-motion.js?v=20261124-1" defer></script>
+</head>
+<body class="case-study-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Navigation -->
+  <header class="case-header wrap">
+    <a class="back-btn" href="index.html#work" aria-label="Return to portfolio homepage">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5m7-7-7 7 7 7"/></svg> Return to Portfolio
+    </a>
+    <div class="header-tag">DTU · DEPT OF ELECTRONICS &amp; COMMUNICATION ENGG</div>
+    <a class="github-nav" href="https://github.com/aakash9972sn" target="_blank" rel="noopener noreferrer">
+      GitHub <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg>
+    </a>
+  </header>
+
+  <!-- Sticky In-Page Navigator -->
+  <nav class="case-subnav" aria-label="In-page section navigator">
+    <div class="wrap subnav-inner">
+      <div class="subnav-links">
+        <a href="#overview">Overview</a>
+        <a href="#about">About Workshop</a>
+        <a href="#lineage">Pedagogical Lineage</a>
+        <a href="#doa-philosophy">Philosophy of DOA</a>
+        <a href="#bjt-biasing">BJT Biasing &amp; Stability</a>
+        <a href="#amplifier-design">Audio Amplifier</a>
+        <a href="#middlebrook-eet">Middlebrook's EET</a>
+        <a href="#notes-archive">Lecture Notes Archive</a>
+        <a href="#takeaways">Takeaways</a>
+        <a href="#downloads">Downloads</a>
+      </div>
+      <a class="subnav-cta" href="#downloads">
+        <span>📄</span> Download PDFs
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero-section wrap" id="overview" aria-labelledby="hero-title">
+      <div class="hero-meta-top">
+        <span class="eyebrow-pill"><i></i> Electronics &amp; Communication Engineering • Technical Workshop</span>
+        <span class="hero-dates-tag">3–4 June 2026</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-title">Analog Circuit Analysis,<br><em>Design &amp; Testing.</em></h1>
+          <p class="hero-subtitle-text">
+            From Low-Entropy Equations to Hardware Synthesis | <strong>Design-Oriented Analysis</strong>
+          </p>
+          <p class="hero-description-prose">
+            Explored the core principles of analog electronics through an intensive two-day technical workshop organized by the Department of Electronics and Communication Engineering at Delhi Technological University. Grounded in the pioneering Design-Oriented Analysis (DOA) methods of Prof. R. David Middlebrook (Caltech) and the intuitive teachings of Prof. Behzad Razavi and Prof. Ali Hajimiri, the program delivered a rigorous engineering pathway to synthesize stable BJT biasing, eliminate thermal runaway, derive small-signal amplifier transfer functions by inspection, and master the Extra Element Theorem (EET).
+          </p>
+
+          <!-- Fast Specs Grid -->
+          <div class="spec-strip-grid">
+            <div class="spec-cell">
+              <span class="label">Institution</span>
+              <span class="val">Delhi Technological University (DTU)</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Organizing Department</span>
+              <span class="val">Dept. of Electronics &amp; Comm. Engg.</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Dates &amp; Scope</span>
+              <span class="val highlight">3–4 June 2026 (Two-Day Intensive)</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Core Framework</span>
+              <span class="val">Design-Oriented Analysis &amp; EET</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Department Leadership</span>
+              <span class="val">Prof. Neeta Pandey &amp; Dr. Anurag Chauhan</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Coordinator &amp; Resource</span>
+              <span class="val">Mr. Vinay Kumar (Assistant Prof., ECE)</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Participant</span>
+              <span class="val">AAKASH (B.Tech ECE · 2024–2028)</span>
+            </div>
+            <div class="spec-cell">
+              <span class="label">Target Cohort</span>
+              <span class="val">B.Tech ECE 2nd Year (30 Seats)</span>
+            </div>
+          </div>
+
+          <!-- Professional Tags -->
+          <div class="hero-tag-cloud" aria-label="Technical topics covered">
+            <span class="tag-chip">Design-Oriented Analysis</span>
+            <span class="tag-chip">Low-Entropy Expressions</span>
+            <span class="tag-chip">Middlebrook's EET</span>
+            <span class="tag-chip">BJT Biasing Stability</span>
+            <span class="tag-chip">Emitter Degeneration (RE)</span>
+            <span class="tag-chip">Small-Signal CE Amplifier</span>
+            <span class="tag-chip">Dynamic Resistance (re)</span>
+            <span class="tag-chip">Pole-Zero Bode Response</span>
+            <span class="tag-chip">SPICE Simulation</span>
+            <span class="tag-chip">Dual EET (DEET)</span>
+          </div>
+        </div>
+
+        <!-- Poster Exhibition Card -->
+        <aside class="hero-poster-aside" aria-label="Official workshop brochure">
+          <figure class="poster-exhibition-card">
+            <div class="poster-frame" id="hero-poster-trigger" title="Click to view full-resolution official brochure">
+              <img src="assets/analog-workshop-brochure.png" alt="Official Workshop Brochure — Two Day Workshop on Analog Circuit Analysis, Design and Testing" width="600" height="464" fetchpriority="high">
+              <div class="poster-overlay-pill">
+                <span>🔍</span> Tap to Expand Brochure
+              </div>
+            </div>
+            <figcaption class="poster-caption-strip">
+              <div>
+                <strong>Official DTU Workshop Brochure</strong>
+                <span>Dept. of ECE · Delhi Technological University</span>
+              </div>
+              <a class="poster-action-btn" href="assets/analog-workshop-brochure.pdf" target="_blank" rel="noopener noreferrer">
+                <span>📥</span> PDF
+              </a>
+            </figcaption>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 01 / About the Workshop -->
+    <section class="editorial-section dark-theme" id="about" aria-labelledby="about-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">01 / INSTITUTIONAL CONTEXT</span>
+          <h2 id="about-heading">Bridging Academic Theory with<br><em>Industry-Standard Practice.</em></h2>
+          <p class="lead-subtitle">
+            Organized by the Department of Electronics and Communication Engineering at Delhi Technological University.
+          </p>
+        </header>
+
+        <div class="about-grid-layout">
+          <div class="about-prose">
+            <p>
+              Delhi Technological University (formerly Delhi College of Engineering), situated in Shahbad Daulatpur, Bawana Road, Delhi, stands as one of India's premier technological institutions. Established in 1941, DTU plays a pivotal role in the national and global innovation network, cultivating methodical engineering research and rigorous technical excellence.
+            </p>
+            <p>
+              The Department of Electronics and Communication Engineering (ECE), established in 1976, has spent five decades nurturing innovations in semiconductor devices, analog/digital circuit design, signal processing, and communication systems. The department's mission emphasizes creating a continuously evolving educational environment that tackles tomorrow's hardware challenges.
+            </p>
+            <p>
+              This two-day workshop was specifically conceived to bridge the persistent divide between classroom circuit analysis and real-world hardware synthesis. Rather than approaching analog electronics as a tedious collection of Kirchhoff's laws and giant determinants, the curriculum introduced students to <strong>Design-Oriented Analysis (DOA)</strong>—equipping future circuit designers with the intuition required for advanced laboratory courses, core-industry placements, and hardware research.
+            </p>
+
+            <div class="objective-list-box">
+              <h3><span>✦</span> Workshop Learning Objectives (Official Brochure)</h3>
+              <ol>
+                <li><strong>Mastery of Industry Analysis:</strong> Learn analytical techniques that simplify complex circuit equations into low-entropy, physically transparent expressions.</li>
+                <li><strong>Hardware Troubleshooting &amp; SPICE:</strong> Develop enhanced proficiency in SPICE circuit simulation and systematic benchtop debugging.</li>
+                <li><strong>Practical Audio Amplifier Synthesis:</strong> Gain end-to-end experience in calculating, sizing, and optimizing a functional BJT audio amplifier.</li>
+                <li><strong>Core Industry Placement Readiness:</strong> Build strong technical foundations for competitive hardware competitions, hackathons, and analog engineering interviews.</li>
+              </ol>
+            </div>
+          </div>
+
+          <aside class="committee-card-stack" aria-label="Organizing Committee and Leadership">
+            <div class="person-card">
+              <span class="role-tag">Patron</span>
+              <h4>Prof. Prateek Sharma</h4>
+              <p>Vice Chancellor, Delhi Technological University</p>
+            </div>
+            <div class="person-card">
+              <span class="role-tag">Convener</span>
+              <h4>Prof. Neeta Pandey</h4>
+              <p>Head of Department, Department of ECE, DTU</p>
+            </div>
+            <div class="person-card">
+              <span class="role-tag">Organised By</span>
+              <h4>Dr. Anurag Chauhan</h4>
+              <p>Assistant Professor, Department of ECE, DTU</p>
+            </div>
+            <div class="person-card coord">
+              <span class="role-tag">Coordinator &amp; Resource Person</span>
+              <h4>Mr. Vinay Kumar</h4>
+              <p>Assistant Professor, Department of ECE, DTU</p>
+              <a class="contact-link" href="mailto:vinaykumar@dtu.ac.in">✉ vinaykumar@dtu.ac.in</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 / Pedagogical Lineage -->
+    <section class="editorial-section paper-theme" id="lineage" aria-labelledby="lineage-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">02 / PEDAGOGICAL LINEAGE</span>
+          <h2 id="lineage-heading">Standing on the Shoulders of<br><em>Analog Engineering Giants.</em></h2>
+          <p class="lead-subtitle">
+            The lecture notes explicitly acknowledge three intellectual masters whose teaching philosophy shaped the workshop's pedagogy.
+          </p>
+        </header>
+
+        <div class="lineage-cards-grid">
+          <!-- Middlebrook -->
+          <article class="lineage-card">
+            <span class="lineage-badge">Caltech Pioneer</span>
+            <h3>Late Prof. R. D. Middlebrook</h3>
+            <span class="lineage-institution">California Institute of Technology (1929–2010)</span>
+            <blockquote class="lineage-quote">
+              "Never calculate without first knowing the answer. If you can’t look at a circuit and write down its behavior, your algebra will only obscure the truth."
+            </blockquote>
+            <p class="lineage-contributions">
+              Father of <strong>Design-Oriented Analysis (DOA)</strong> and inventor of the <strong>Extra Element Theorem (EET)</strong>. Middlebrook revolutionized power electronics and analog circuit analysis by insisting that engineers reject "high-entropy algebraic soup" in favor of transparent pole-zero representations.
+            </p>
+          </article>
+
+          <!-- Hajimiri -->
+          <article class="lineage-card">
+            <span class="lineage-badge">Caltech Professor</span>
+            <h3>Prof. Ali Hajimiri</h3>
+            <span class="lineage-institution">Bren Professor of EE &amp; Medical Engg., Caltech</span>
+            <blockquote class="lineage-quote">
+              "Circuit design is the art of balancing opposing physical constraints with elegant simplicity."
+            </blockquote>
+            <p class="lineage-contributions">
+              Internationally celebrated researcher in high-frequency integrated circuits, silicon photonics, and wireless power. Renowned for his time-variant phase noise models and pedagogical focus on physical intuition over brute-force equations.
+            </p>
+          </article>
+
+          <!-- Razavi -->
+          <article class="lineage-card">
+            <span class="lineage-badge">UCLA Professor</span>
+            <h3>Prof. Behzad Razavi</h3>
+            <span class="lineage-institution">Distinguished Professor of EE, UCLA</span>
+            <blockquote class="lineage-quote">
+              "An engineer must develop an eye that sees through transistors, immediately identifying the dominant loop and impedance bottlenecks."
+            </blockquote>
+            <p class="lineage-contributions">
+              World-renowned educator and IEEE Pioneer awardee. Author of the definitive textbooks <em>Design of Analog CMOS Integrated Circuits</em> and <em>Fundamentals of Microelectronics</em>, teaching generations of engineers how to analyze complex circuits by inspection.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 / Philosophy of DOA -->
+    <section class="editorial-section dark-theme" id="doa-philosophy" aria-labelledby="doa-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">03 / CORE METHODOLOGY</span>
+          <h2 id="doa-heading">The Philosophy of<br><em>Design-Oriented Analysis (DOA).</em></h2>
+          <p class="lead-subtitle">
+            Why traditional textbook analysis fails when engineering real systems, and how low-entropy thinking unlocks hardware design.
+          </p>
+        </header>
+
+        <!-- Analysis vs Design Comparison -->
+        <div class="doa-compare-grid">
+          <div class="compare-card analysis">
+            <span class="compare-tag">Traditional Circuit Analysis</span>
+            <h3>Given Circuit Topology → Find Outputs</h3>
+            <p>
+              In conventional classroom analysis, the circuit diagram, all component values (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>R</mi><mn>2</mn></msub><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">R_1, R_2, C, \beta</annotation></semantics></math>), and source characteristics are completely known beforehand.
+            </p>
+            <ul class="bullet-points">
+              <li><span class="dot">•</span> <strong>Determined System:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mtext>equations</mtext></msub><mo>=</mo><msub><mi>N</mi><mtext>variables</mtext></msub></mrow><annotation encoding="application/x-tex">N_{\text{equations}} = N_{\text{variables}}</annotation></semantics></math>. Solvable by mechanical application of KCL/KVL or Cramer's rule.</li>
+              <li><span class="dot">•</span> <strong>Brute-Force Algebra:</strong> Produces monstrous polynomials where individual component values are entangled and obscured.</li>
+              <li><span class="dot">•</span> <strong>Zero Design Insight:</strong> If the gain is too low or bandwidth too narrow, the equations give no clue which resistor or capacitor to adjust.</li>
+            </ul>
+          </div>
+
+          <div class="compare-card design">
+            <span class="compare-tag">Engineering Circuit Design (DOA)</span>
+            <h3>Given Specifications → Synthesize Circuit</h3>
+            <p>
+              In engineering design, you begin with a blank sheet and target performance specifications: gain <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>v</mi></msub></mrow><annotation encoding="application/x-tex">A_v</annotation></semantics></math>, bandwidth <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mtext>cutoff</mtext></msub></mrow><annotation encoding="application/x-tex">f_{\text{cutoff}}</annotation></semantics></math>, input impedance <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mtext>in</mtext></msub></mrow><annotation encoding="application/x-tex">R_{\text{in}}</annotation></semantics></math>, and dynamic range.
+            </p>
+            <ul class="bullet-points">
+              <li><span class="dot">•</span> <strong>Under-Constrained System:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mtext>variables</mtext></msub><mo>&gt;</mo><msub><mi>N</mi><mtext>equations</mtext></msub></mrow><annotation encoding="application/x-tex">N_{\text{variables}} &gt; N_{\text{equations}}</annotation></semantics></math>. There are infinite possible component combinations.</li>
+              <li><span class="dot">•</span> <strong>Engineering Choices:</strong> The designer must make informed choices using rules of thumb, trade-offs, standard E24 series values, and thermal margins.</li>
+              <li><span class="dot">•</span> <strong>Low-Entropy Form:</strong> Expressions must be written so that every parameter corresponds directly to a physical circuit element or asymptotic corner.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Low Entropy Math Box -->
+        <div class="low-entropy-box">
+          <div class="box-title-row">
+            <h4>"Do Not Cross-Multiply Stuff!" — Middlebrook's Rule of Low-Entropy</h4>
+            <span style="font-size:12px; color:var(--muted);">Lecture Note Sheet 2</span>
+          </div>
+
+          <div class="entropy-comparison-split">
+            <div class="entropy-panel bad">
+              <span class="entropy-label">High-Entropy Expression (Avoid)</span>
+              <div class="math-display book-equation" id="equation-1"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 1; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>s</mi><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msup><mi>s</mi><mn>2</mn></msup></mrow><mrow><msub><mi>b</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mi>s</mi><mo>+</mo><msub><mi>b</mi><mn>2</mn></msub><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><msub><mi>b</mi><mn>3</mn></msub><msup><mi>s</mi><mn>3</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">H(s) = \frac{a_0 + a_1 s + a_2 s^2}{b_0 + b_1 s + b_2 s^2 + b_3 s^3}</annotation></semantics></math></div><span class="equation-number">(1)</span></div>
+              <p>
+                A high-entropy polynomial has all coefficients expanded out. It hides where the poles and zeros are located, making it impossible to see which capacitor limits high-frequency response or how to adjust feedback.
+              </p>
+            </div>
+
+            <div class="entropy-panel good">
+              <span class="entropy-label">Low-Entropy Expression (Design-Oriented)</span>
+              <div class="math-display book-equation" id="equation-2"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 2; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>H</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>s</mi><msub><mi>ω</mi><mi>z</mi></msub></mfrac></mrow><mrow><mrow><mo fence="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mi>s</mi><msub><mi>ω</mi><mrow><mi>p</mi><mn>1</mn></mrow></msub></mfrac><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mi>s</mi><msub><mi>ω</mi><mrow><mi>p</mi><mn>2</mn></mrow></msub></mfrac><mo fence="true">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">H(s) = A_0 \cdot \frac{1 + \frac{s}{\omega_z}}{\left(1 + \frac{s}{\omega_{p1}}\right)\left(1 + \frac{s}{\omega_{p2}}\right)}</annotation></semantics></math></div><span class="equation-number">(2)</span></div>
+              <p>
+                A low-entropy expression expresses the transfer function in terms of midband reference gain <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">A_0</annotation></semantics></math> and salient corner frequencies (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>z</mi></msub><mo separator="true">,</mo><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\omega_z, \omega_p</annotation></semantics></math>). Any shift in a component immediately shows its exact effect on the Bode plot!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node Resistance & Dominance Rules -->
+        <div class="objective-list-box" style="margin-top:0;">
+          <h3><span>✦</span> Terminal Resistance &amp; Dominance Principles (Sheets 3 &amp; 4)</h3>
+          <p style="font-size:14px; color:var(--muted-light); margin-bottom:12px;">
+            A key skill in DOA is finding the equivalent resistance seen by any capacitor or node without redrawing large small-signal networks:
+          </p>
+          <ul class="bullet-points">
+            <li><span class="dot">•</span> <strong>Parallel Dominance:</strong> When two or more resistive paths exist in parallel (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>∥</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_1 \parallel R_2</annotation></semantics></math>), the smallest resistance strictly dominates the equivalent impedance (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mtext>eq</mtext></msub><mo>≈</mo><msub><mi>R</mi><mtext>small</mtext></msub></mrow><annotation encoding="application/x-tex">R_{\text{eq}} \approx R_{\text{small}}</annotation></semantics></math>).</li>
+            <li><span class="dot">•</span> <strong>Series Dominance:</strong> When impedances are in series (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_1 + R_2</annotation></semantics></math>), the largest resistance dominates (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mtext>eq</mtext></msub><mo>≈</mo><msub><mi>R</mi><mtext>large</mtext></msub></mrow><annotation encoding="application/x-tex">R_{\text{eq}} \approx R_{\text{large}}</annotation></semantics></math>).</li>
+            <li><span class="dot">•</span> <strong>Source Loading Effect:</strong> An ideal voltage source has zero output impedance (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>s</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">R_s = 0</annotation></semantics></math>). Real-world signal generators and microphones have finite <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">R_s</annotation></semantics></math>, attenuating the signal if the amplifier's input impedance <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mtext>in</mtext></msub></mrow><annotation encoding="application/x-tex">R_{\text{in}}</annotation></semantics></math> is not engineered significantly higher than <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">R_s</annotation></semantics></math>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / BJT Biasing & Thermal Stability -->
+    <section class="editorial-section card-theme" id="bjt-biasing" aria-labelledby="biasing-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">04 / BIPOLAR JUNCTION TRANSISTORS</span>
+          <h2 id="biasing-heading">Thermal Sensitivity &amp; Negative Feedback:<br><em>The Emitter Degeneration (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math>) Solution.</em></h2>
+          <p class="lead-subtitle">
+            Analyzing why fixed base-biasing fails catastrophically, and how the 10% <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{CC}</annotation></semantics></math> rule establishes rock-solid operating points.
+          </p>
+        </header>
+
+        <div class="doa-compare-grid">
+          <div class="compare-card analysis">
+            <span class="compare-tag" style="color:#f87171; background:rgba(239,68,68,0.1);">The Thermal Instability Trap</span>
+            <h3>The Exponential <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></mrow><annotation encoding="application/x-tex">I_C - V_{BE}</annotation></semantics></math> Relation</h3>
+            <p>
+              In a bipolar junction transistor, collector current follows the Shockley diode equation:
+            </p>
+            <div class="math-display book-equation" id="equation-3"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 3; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>=</mo><msub><mi>I</mi><mi>S</mi></msub><mi>exp</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub><msub><mi>V</mi><mi>T</mi></msub></mfrac><mo fence="true">)</mo></mrow><mtext>  </mtext><mo>⟺</mo><mtext>  </mtext><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mi>T</mi></msub><mi>ln</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><msub><mi>I</mi><mi>C</mi></msub><msub><mi>I</mi><mi>S</mi></msub></mfrac><mo fence="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">I_C = I_S \exp\left(\frac{V_{BE}}{V_T}\right) \iff V_{BE} = V_T \ln\left(\frac{I_C}{I_S}\right)</annotation></semantics></math></div><span class="equation-number">(3)</span></div>
+            <p>
+              Where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>T</mi></msub><mo>=</mo><mfrac><mrow><mi>k</mi><mi>T</mi></mrow><mi>q</mi></mfrac><mo>≈</mo><mn>26</mn><mtext> mV</mtext></mrow><annotation encoding="application/x-tex">V_T = \frac{kT}{q} \approx 26\text{ mV}</annotation></semantics></math> at room temperature. Because of this exponential relationship:
+            </p>
+            <ul class="bullet-points">
+              <li><span class="dot">•</span> <strong><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BE}</annotation></semantics></math> Temperature Drift:</strong> <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BE}</annotation></semantics></math> drops by approximately <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>2</mn><mtext> mV</mtext><msup><mi mathvariant="normal">/</mi><mo>∘</mo></msup><mtext>C</mtext></mrow><annotation encoding="application/x-tex">-2\text{ mV}/^\circ\text{C}</annotation></semantics></math> as the transistor heats up.</li>
+              <li><span class="dot">•</span> <strong>The 300% Surge Catastrophe:</strong> A mere <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">10\%</annotation></semantics></math> decrease in <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BE}</annotation></semantics></math> (or slight temperature rise) causes an explosive <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo><mn>300</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">+300\%</annotation></semantics></math> surge in collector current <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">I_C</annotation></semantics></math>!</li>
+              <li><span class="dot">•</span> <strong>Thermal Runaway:</strong> Without stabilization, rising <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">I_C</annotation></semantics></math> generates internal <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>I</mi><mn>2</mn></msup><mi>R</mi></mrow><annotation encoding="application/x-tex">I^2 R</annotation></semantics></math> heat, which increases temperature, further increasing <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">I_C</annotation></semantics></math> until the transistor melts or saturates.</li>
+            </ul>
+          </div>
+
+          <div class="compare-card design">
+            <span class="compare-tag">The Negative Feedback Cure</span>
+            <h3>Emitter Degeneration (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math>) Feedback</h3>
+            <p>
+              Inserting an emitter resistor <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math> introduces series-series negative feedback that self-regulates the collector current:
+            </p>
+            <div class="math-display book-equation" id="equation-4"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 4; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>↑</mo><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><msub><mi>V</mi><mi>E</mi></msub><mo>=</mo><msub><mi>I</mi><mi>E</mi></msub><msub><mi>R</mi><mi>E</mi></msub><mo>↑</mo><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><msub><mi>V</mi><mi>B</mi></msub><mo>−</mo><msub><mi>V</mi><mi>E</mi></msub><mo stretchy="false">)</mo><mo>↓</mo><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><msub><mi>I</mi><mi>C</mi></msub><mo>↓</mo></mrow><annotation encoding="application/x-tex">I_C \uparrow \implies V_E = I_E R_E \uparrow \implies V_{BE} = (V_B - V_E) \downarrow \implies I_C \downarrow</annotation></semantics></math></div><span class="equation-number">(4)</span></div>
+            <p>
+              The loop gain automatically stabilizes the operating point:
+            </p>
+            <ul class="bullet-points">
+              <li><span class="dot">•</span> <strong><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math>-Insensitive Bias:</strong> Collector current becomes fixed primarily by passive resistors: <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>≈</mo><mfrac><mrow><msub><mi>V</mi><mi>B</mi></msub><mo>−</mo><mn>0.7</mn><mtext>V</mtext></mrow><msub><mi>R</mi><mi>E</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">I_C \approx \frac{V_B - 0.7\text{V}}{R_E}</annotation></semantics></math>.</li>
+              <li><span class="dot">•</span> <strong>The Industry 10% Rule of Thumb:</strong> Allocate <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">10\%</annotation></semantics></math> of rail supply across <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math> (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>E</mi></mrow></msub><mo>≈</mo><mn>0.1</mn><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{RE} \approx 0.1 V_{CC}</annotation></semantics></math>). For <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub><mo>=</mo><mn>20</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">V_{CC}=20\text{V}</annotation></semantics></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>E</mi></mrow></msub><mo>=</mo><mn>2</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">V_{RE}=2\text{V}</annotation></semantics></math>; for <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>=</mo><mn>10</mn><mtext>mA</mtext></mrow><annotation encoding="application/x-tex">I_C=10\text{mA}</annotation></semantics></math>, <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub><mo>=</mo><mn>200</mn><mtext> </mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">R_E=200\ \Omega</annotation></semantics></math>.</li>
+              <li><span class="dot">•</span> <strong>Base Divider Stiffening:</strong> Design divider current <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mtext>divider</mtext></msub><mo>≥</mo><mn>10</mn><msub><mi>I</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">I_{\text{divider}} \ge 10 I_B</annotation></semantics></math> so base voltage <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">V_B</annotation></semantics></math> is immune to loading, then match to standard E24 laboratory resistors (e.g. 47k and 8.2k).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Interactive BJT Bias Calculator -->
+        <div class="bjt-interactive-card">
+          <div class="calc-inputs-col">
+            <h3><span>⚡</span> Interactive BJT Bias &amp; Operating Point Calculator</h3>
+            <p>Adjust supply rails and current targets to synthesize stable bias components using the workshop's 10% rule of thumb.</p>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label class="lbl" for="calc-vcc">Supply Voltage (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{CC}</annotation></semantics></math>)</label>
+                <span class="val" id="vcc-val-disp">20.0 V</span>
+              </div>
+              <input type="range" class="range-slider" id="calc-vcc" min="10" max="30" step="1" value="20">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label class="lbl" for="calc-ic">Target Collector Current (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">I_C</annotation></semantics></math>)</label>
+                <span class="val" id="ic-val-disp">10.0 mA</span>
+              </div>
+              <input type="range" class="range-slider" id="calc-ic" min="1" max="25" step="0.5" value="10">
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-header">
+                <label class="lbl" for="calc-beta">Transistor Current Gain (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math>)</label>
+                <span class="val" id="beta-val-disp">100</span>
+              </div>
+              <input type="range" class="range-slider" id="calc-beta" min="50" max="300" step="10" value="100">
+            </div>
+          </div>
+
+          <div class="calc-results-col">
+            <div class="results-grid">
+              <div class="res-box">
+                <span class="label">Emitter Voltage (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>E</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{RE}</annotation></semantics></math>)</span>
+                <span class="value" id="out-vre">2.00 V</span>
+                <span class="note">10% of <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>C</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{CC}</annotation></semantics></math> budget</span>
+              </div>
+              <div class="res-box">
+                <span class="label">Degeneration Resistor (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math>)</span>
+                <span class="value" id="out-re">200 Ω</span>
+                <span class="note"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>E</mi></mrow></msub><mi mathvariant="normal">/</mi><msub><mi>I</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">V_{RE} / I_C</annotation></semantics></math></span>
+              </div>
+              <div class="res-box">
+                <span class="label">Base Bias Voltage (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">V_B</annotation></semantics></math>)</span>
+                <span class="value" id="out-vb">2.70 V</span>
+                <span class="note"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>E</mi></mrow></msub><mo>+</mo><mn>0.7</mn><mtext>V</mtext></mrow><annotation encoding="application/x-tex">V_{RE} + 0.7\text{V}</annotation></semantics></math></span>
+              </div>
+              <div class="res-box">
+                <span class="label">Collector Resistor (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">R_C</annotation></semantics></math>)</span>
+                <span class="value" id="out-rc">885 Ω</span>
+                <span class="note">Mid-rail dynamic swing</span>
+              </div>
+              <div class="res-box">
+                <span class="label">Upper Divider (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_1</annotation></semantics></math>)</span>
+                <span class="value" id="out-r1">15.7 kΩ</span>
+                <span class="note">Stiff <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><msub><mi>I</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">10 I_B</annotation></semantics></math> sizing</span>
+              </div>
+              <div class="res-box">
+                <span class="label">Lower Divider (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_2</annotation></semantics></math>)</span>
+                <span class="value" id="out-r2">2.7 kΩ</span>
+                <span class="note">Immune to <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi></mrow><annotation encoding="application/x-tex">\beta</annotation></semantics></math> variations</span>
+              </div>
+              <div class="res-box">
+                <span class="label">Dynamic Resistance (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">r_e</annotation></semantics></math>)</span>
+                <span class="value" id="out-re-small">2.60 Ω</span>
+                <span class="note"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>T</mi></msub><mi mathvariant="normal">/</mi><msub><mi>I</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">V_T / I_C</annotation></semantics></math> small-signal</span>
+              </div>
+              <div class="res-box">
+                <span class="label">Quiescent <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">V_C</annotation></semantics></math></span>
+                <span class="value" id="out-vc">11.15 V</span>
+                <span class="note">Symmetric audio swing</span>
+              </div>
+            </div>
+
+            <div class="stability-verdict-banner">
+              <strong>✓ Thermally Stable Q-Point:</strong> Negative feedback maintains collector current within ±2% of target even under substantial ambient temperature shifts or transistor replacement.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 / Small-Signal Audio Amplifier Design -->
+    <section class="editorial-section dark-theme" id="amplifier-design" aria-labelledby="amp-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">05 / CIRCUIT SYNTHESIS</span>
+          <h2 id="amp-heading">Small-Signal Audio Amplifier:<br><em>Inspection-Based Gain &amp; Capacitor Sizing.</em></h2>
+          <p class="lead-subtitle">
+            Deriving midband voltage gain, input impedance, and coupling capacitor boundaries without solving matrix determinants.
+          </p>
+        </header>
+
+        <div class="doa-compare-grid">
+          <div class="compare-card analysis">
+            <span class="compare-tag">Small-Signal Parameters</span>
+            <h3>Dynamic Emitter Resistance (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">r_e</annotation></semantics></math>)</h3>
+            <p>
+              Looking into the emitter terminal of a forward-biased BJT reveals an intrinsic AC dynamic resistance governed strictly by thermal voltage and DC bias current:
+            </p>
+            <div class="math-display book-equation" id="equation-5"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 5; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>r</mi><mi>e</mi></msub><mo>=</mo><mfrac><msub><mi>V</mi><mi>T</mi></msub><msub><mi>I</mi><mi>C</mi></msub></mfrac><mo>≈</mo><mfrac><mrow><mn>26</mn><mtext> mV</mtext></mrow><mrow><mn>10</mn><mtext> mA</mtext></mrow></mfrac><mo>=</mo><mn>2.6</mn><mtext> </mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">r_e = \frac{V_T}{I_C} \approx \frac{26\text{ mV}}{10\text{ mA}} = 2.6\ \Omega</annotation></semantics></math></div><span class="equation-number">(5)</span></div>
+            <p>
+              Because <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">r_e</annotation></semantics></math> is remarkably small (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.6</mn><mtext> </mtext><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">2.6\ \Omega</annotation></semantics></math>), the intrinsic transconductance <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mi>m</mi></msub><mo>=</mo><mn>1</mn><mi mathvariant="normal">/</mi><msub><mi>r</mi><mi>e</mi></msub><mo>≈</mo><mn>385</mn><mtext> mS</mtext></mrow><annotation encoding="application/x-tex">g_m = 1/r_e \approx 385\text{ mS}</annotation></semantics></math> provides tremendous voltage gain capability when un-degenerated.
+            </p>
+          </div>
+
+          <div class="compare-card design">
+            <span class="compare-tag">Gain by Inspection</span>
+            <h3>The Complete Midband Transfer Function</h3>
+            <p>
+              Using Design-Oriented Analysis, the voltage gain from source <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">v_s</annotation></semantics></math> to output <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>o</mi></msub></mrow><annotation encoding="application/x-tex">v_o</annotation></semantics></math> is written down in a single glance:
+            </p>
+            <div class="math-display book-equation" id="equation-6"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 6; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>A</mi><mi>v</mi></msub><mo>=</mo><mfrac><msub><mi>v</mi><mi>o</mi></msub><msub><mi>v</mi><mi>s</mi></msub></mfrac><mo>=</mo><mo>−</mo><mrow><mo fence="true">(</mo><mfrac><msub><mi>R</mi><mi>B</mi></msub><mrow><msub><mi>R</mi><mi>s</mi></msub><mo>+</mo><msub><mi>R</mi><mi>B</mi></msub></mrow></mfrac><mo fence="true">)</mo></mrow><mo>⋅</mo><mfrac><mrow><mi>α</mi><msub><mi>R</mi><mi>C</mi></msub></mrow><mrow><msub><mi>r</mi><mi>e</mi></msub><mo>+</mo><msub><mi>R</mi><mi>E</mi></msub><mo>+</mo><mfrac><mrow><msub><mi>R</mi><mi>s</mi></msub><mo>∥</mo><msub><mi>R</mi><mi>B</mi></msub></mrow><mrow><mn>1</mn><mo>+</mo><mi>β</mi></mrow></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">A_v = \frac{v_o}{v_s} = -\left(\frac{R_B}{R_s + R_B}\right) \cdot \frac{\alpha R_C}{r_e + R_E + \frac{R_s \parallel R_B}{1+\beta}}</annotation></semantics></math></div><span class="equation-number">(6)</span></div>
+            <p>
+              Where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>B</mi></msub><mo>=</mo><msub><mi>R</mi><mn>1</mn></msub><mo>∥</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_B = R_1 \parallel R_2</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mfrac><mi>β</mi><mrow><mn>1</mn><mo>+</mo><mi>β</mi></mrow></mfrac><mo>≈</mo><mn>0.99</mn></mrow><annotation encoding="application/x-tex">\alpha = \frac{\beta}{1+\beta} \approx 0.99</annotation></semantics></math>. The leading factor accounts for input source attenuation, while the denominator transparently sums all resistances in the emitter loop!
+            </p>
+          </div>
+        </div>
+
+        <!-- Coupling Capacitor & Frequency Response -->
+        <div class="objective-list-box">
+          <h3><span>✦</span> Input Coupling Capacitor (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_1</annotation></semantics></math>) Sizing &amp; The <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><mn>10</mn></mrow><annotation encoding="application/x-tex">f_1 / 10</annotation></semantics></math> Safety Rule (Sheets 12 &amp; 13)</h3>
+          <p style="font-size:14px; color:var(--muted-light); margin-bottom:12px;">
+            The input coupling capacitor <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_1</annotation></semantics></math> isolates the sensitive DC base bias from external audio sources while passing AC audio signals. Sizing <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_1</annotation></semantics></math> requires calculating the total resistance in its loop:
+          </p>
+          <div class="math-display book-equation" id="equation-7"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 7; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>R</mi><mtext>in</mtext></msub><mo>=</mo><msub><mi>R</mi><mi>B</mi></msub><mo>∥</mo><mrow><mo fence="true">[</mo><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mi>β</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><msub><mi>r</mi><mi>e</mi></msub><mo>+</mo><msub><mi>R</mi><mi>E</mi></msub><mo stretchy="false">)</mo><mo fence="true">]</mo></mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><msub><mi>f</mi><mrow><mi>p</mi><mn>1</mn></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi><msub><mi>C</mi><mn>1</mn></msub><mo stretchy="false">(</mo><msub><mi>R</mi><mi>s</mi></msub><mo>+</mo><msub><mi>R</mi><mtext>in</mtext></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">R_{\text{in}} = R_B \parallel \left[(1+\beta)(r_e + R_E)\right] \implies f_{p1} = \frac{1}{2\pi C_1 (R_s + R_{\text{in}})}</annotation></semantics></math></div><span class="equation-number">(7)</span></div>
+          <p style="font-size:14px; color:var(--muted-light);">
+            <strong>The 10x Safety Rule:</strong> If the lowest audio frequency of interest is <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>100</mn><mtext> Hz</mtext></mrow><annotation encoding="application/x-tex">f_1 = 100\text{ Hz}</annotation></semantics></math> (or <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><mtext> Hz</mtext></mrow><annotation encoding="application/x-tex">20\text{ Hz}</annotation></semantics></math> for high-fidelity bass), never set the <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mn>3</mn><mtext> dB</mtext></mrow><annotation encoding="application/x-tex">-3\text{ dB}</annotation></semantics></math> corner right at <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_1</annotation></semantics></math>. At the corner frequency, the signal is attenuated by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mtext> dB</mtext></mrow><annotation encoding="application/x-tex">3\text{ dB}</annotation></semantics></math> (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">30\%</annotation></semantics></math>) and suffers a massive <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>45</mn><mo>∘</mo></msup></mrow><annotation encoding="application/x-tex">45^\circ</annotation></semantics></math> phase distortion. Instead, the workshop taught to design <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>c</mi><mi>o</mi><mi>r</mi><mi>n</mi><mi>e</mi><mi>r</mi></mrow></msub><mo>=</mo><msub><mi>f</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><mn>10</mn><mo>=</mo><mn>10</mn><mtext> Hz</mtext></mrow><annotation encoding="application/x-tex">f_{corner} = f_1 / 10 = 10\text{ Hz}</annotation></semantics></math>, ensuring <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mn>0.04</mn><mtext> dB</mtext></mrow><annotation encoding="application/x-tex">&lt; 0.04\text{ dB}</annotation></semantics></math> attenuation and zero perceptible phase shift in the audio band!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 / Middlebrook's Extra Element Theorem (EET) -->
+    <section class="editorial-section paper-theme" id="middlebrook-eet" aria-labelledby="eet-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">06 / ADVANCED CIRCUIT THEOREMS</span>
+          <h2 id="eet-heading">Middlebrook's Extra Element Theorem (EET):<br><em>Adding Components Without Re-Solving.</em></h2>
+          <p class="lead-subtitle">
+            One of the most powerful theorems in analog design: modify any circuit with an extra impedance <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math> using driving-point and null double-injection impedances.
+          </p>
+        </header>
+
+        <div class="eet-breakdown-grid">
+          <div class="eet-math-card">
+            <h3><span>⚡</span> The Master EET Formulation</h3>
+            <p>
+              If a circuit transfer function <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mo fence="false" stretchy="true" minsize="1.2em" maxsize="1.2em">∣</mo><mrow><mi>Z</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub></mrow><annotation encoding="application/x-tex">A\big|_{Z\to\infty}</annotation></semantics></math> is known when element <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math> is absent (open circuit), the exact transfer function with <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math> connected is given by:
+            </p>
+            <div class="eet-formula-box book-equation" id="equation-8"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 8; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><msub><mo fence="false" stretchy="true" minsize="1.8em" maxsize="1.8em">∣</mo><mrow><mi>Z</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><msub><mi>Z</mi><mi>n</mi></msub><mi>Z</mi></mfrac></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><msub><mi>Z</mi><mi>d</mi></msub><mi>Z</mi></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">A(s) = A\Big|_{Z\to\infty} \cdot \frac{1 + \frac{Z_n}{Z}}{1 + \frac{Z_d}{Z}}</annotation></semantics></math></div><span class="equation-number">(8)</span></div>
+            <p>
+              Where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">Z_d</annotation></semantics></math> is the driving-point impedance seen by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math> when input <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>s</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_s = 0</annotation></semantics></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Z_n</annotation></semantics></math> is the null double-injection impedance seen by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math> when output <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>o</mi></msub></mrow><annotation encoding="application/x-tex">v_o</annotation></semantics></math> is held at null (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>o</mi></msub><mo>≡</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_o \equiv 0</annotation></semantics></math>).
+            </p>
+          </div>
+
+          <div class="eet-math-card">
+            <h3><span>🔍</span> Calculating <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">Z_d</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Z_n</annotation></semantics></math> by Inspection</h3>
+            <p>
+              Applying EET to the <strong>Emitter Bypass Capacitor (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_2</annotation></semantics></math>)</strong> across <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math>:
+            </p>
+            <ul style="padding-left:18px; margin:10px 0; font-size:13px; color:#374151;">
+              <li><strong>Driving Point Impedance (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">Z_d</annotation></semantics></math>):</strong> With input shorted (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>s</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_s=0</annotation></semantics></math>), looking into <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math> terminals reveals <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>d</mi></msub><mo>=</mo><msub><mi>R</mi><mi>E</mi></msub><mo>∥</mo><msubsup><mi>r</mi><mi>e</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup></mrow><annotation encoding="application/x-tex">Z_d = R_E \parallel r_e&#x27;</annotation></semantics></math>.</li>
+              <li><strong>Null Injection Impedance (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Z_n</annotation></semantics></math>):</strong> Under the condition <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>o</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_o = 0</annotation></semantics></math>, collector current <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>i</mi><mi>c</mi></msub><mo>=</mo><mn>0</mn><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext><msub><mi>i</mi><mi>e</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">i_c = 0 \implies i_e = 0</annotation></semantics></math>. No current enters the emitter; hence <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi></mrow><annotation encoding="application/x-tex">Z</annotation></semantics></math> sees only <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>n</mi></msub><mo>=</mo><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">Z_n = R_E</annotation></semantics></math>!</li>
+            </ul>
+            <div class="eet-formula-box book-equation" id="equation-9"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 9; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>ω</mi><mi>z</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>C</mi><mn>2</mn></msub><msub><mi>R</mi><mi>E</mi></msub></mrow></mfrac><mo separator="true">,</mo><mspace width="1em"/><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>C</mi><mn>2</mn></msub><mo stretchy="false">(</mo><msub><mi>R</mi><mi>E</mi></msub><mo>∥</mo><msubsup><mi>r</mi><mi>e</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msubsup><mo stretchy="false">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\omega_z = \frac{1}{C_2 R_E}, \quad \omega_p = \frac{1}{C_2 (R_E \parallel r_e&#x27;)}</annotation></semantics></math></div><span class="equation-number">(9)</span></div>
+          </div>
+        </div>
+
+        <!-- Interactive Bode Plot Explorer -->
+        <div class="bode-interactive-box">
+          <div class="bode-header-row">
+            <div>
+              <h3>Interactive Bode Magnitude Response &amp; Pole-Zero Shelf</h3>
+              <p style="font-size:13px; color:var(--muted); margin:4px 0 0;">
+                Observe how the Extra Element Theorem creates a low-frequency shelf (governed by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math>) and transitions to high-gain midband (governed by <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">r_e</annotation></semantics></math>).
+              </p>
+            </div>
+            <div class="bode-button-group" role="group" aria-label="Select bypass capacitor value">
+              <button class="bode-btn" data-cap="10">C₂ = 10 µF</button>
+              <button class="bode-btn active" data-cap="47">C₂ = 47 µF (Default)</button>
+              <button class="bode-btn" data-cap="100">C₂ = 100 µF</button>
+            </div>
+          </div>
+
+          <div class="bode-chart-canvas-wrap">
+            <svg viewBox="0 0 600 240" preserveAspectRatio="none" aria-label="Bode magnitude curve">
+              <!-- Grid Lines -->
+              <line x1="60" y1="55" x2="560" y2="55" stroke="#1f2c34" stroke-dasharray="4 4" />
+              <line x1="60" y1="122" x2="560" y2="122" stroke="#1f2c34" stroke-dasharray="4 4" />
+              <line x1="60" y1="190" x2="560" y2="190" stroke="#1f2c34" stroke-dasharray="4 4" />
+              
+              <!-- Frequency Decade Markers -->
+              <line x1="60" y1="30" x2="60" y2="200" stroke="#162026" />
+              <line x1="160" y1="30" x2="160" y2="200" stroke="#162026" />
+              <line x1="260" y1="30" x2="260" y2="200" stroke="#162026" />
+              <line x1="360" y1="30" x2="360" y2="200" stroke="#162026" />
+              <line x1="460" y1="30" x2="460" y2="200" stroke="#162026" />
+              <line x1="560" y1="30" x2="560" y2="200" stroke="#162026" />
+
+              <text x="60" y="218" fill="#64748b" font-family="monospace" font-size="10">1 Hz</text>
+              <text x="160" y="218" fill="#64748b" font-family="monospace" font-size="10">10 Hz</text>
+              <text x="260" y="218" fill="#64748b" font-family="monospace" font-size="10">100 Hz</text>
+              <text x="360" y="218" fill="#64748b" font-family="monospace" font-size="10">1 kHz</text>
+              <text x="460" y="218" fill="#64748b" font-family="monospace" font-size="10">10 kHz</text>
+              <text x="540" y="218" fill="#64748b" font-family="monospace" font-size="10">100 kHz</text>
+
+              <text x="12" y="58" fill="#38bdf8" font-family="monospace" font-size="10">52 dB</text>
+              <text x="12" y="193" fill="#94a3b8" font-family="monospace" font-size="10">14 dB</text>
+
+              <!-- Dynamic Curve -->
+              <path id="bode-curve" d="" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" />
+
+              <!-- Zero & Pole Markers -->
+              <circle id="bode-zero-marker" cx="200" cy="190" r="5" fill="#f59e0b" stroke="#fff" stroke-width="1.5" />
+              <circle id="bode-pole-marker" cx="380" cy="55" r="5" fill="#38bdf8" stroke="#fff" stroke-width="1.5" />
+            </svg>
+          </div>
+
+          <div class="bode-chart-legend">
+            <span><span class="legend-dot zero"></span> Zero Frequency (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>z</mi></msub><mo>=</mo><msub><mi>ω</mi><mi>z</mi></msub><mi mathvariant="normal">/</mi><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">f_z = \omega_z/2\pi</annotation></semantics></math>): <strong id="bode-fz-disp" style="color:#f59e0b; margin-left:4px;">17 Hz</strong></span>
+            <span><span class="legend-dot pole"></span> Pole Frequency (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>p</mi></msub><mo>=</mo><msub><mi>ω</mi><mi>p</mi></msub><mi mathvariant="normal">/</mi><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">f_p = \omega_p/2\pi</annotation></semantics></math>): <strong id="bode-fp-disp" style="color:#38bdf8; margin-left:4px;">1.3 kHz</strong></span>
+            <span><span class="legend-dot gain"></span> Midband AC Gain: <strong id="bode-midgain-disp" style="color:#34d399; margin-left:4px;">~51.7 dB</strong></span>
+          </div>
+        </div>
+
+        <!-- Dual EET note -->
+        <div class="eet-math-card" style="margin-top:24px;">
+          <h3><span>✦</span> Dual Extra Element Theorem (DEET) for Series Elements (Sheet 17)</h3>
+          <p>
+            When adding a series element (such as an input coupling capacitor <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">C_1</annotation></semantics></math>), the natural reference condition is a short circuit (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Z \to 0</annotation></semantics></math>) rather than an open circuit. Middlebrook formulated the Dual EET:
+          </p>
+          <div class="eet-formula-box book-equation" id="equation-10"><div class="equation-content" tabindex="0" role="region" aria-label="Equation 10; scroll horizontally to read the full expression"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>A</mi><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo><mo>=</mo><mi>A</mi><msub><mo fence="false" stretchy="true" minsize="1.8em" maxsize="1.8em">∣</mo><mrow><mi>Z</mi><mo>→</mo><mn>0</mn></mrow></msub><mo>⋅</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mfrac><mi>Z</mi><msubsup><mi>Z</mi><mi>n</mi><mo>∗</mo></msubsup></mfrac></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mi>Z</mi><msubsup><mi>Z</mi><mi>d</mi><mo>∗</mo></msubsup></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">A(s) = A\Big|_{Z\to 0} \cdot \frac{1 + \frac{Z}{Z_n^*}}{1 + \frac{Z}{Z_d^*}}</annotation></semantics></math></div><span class="equation-number">(10)</span></div>
+          <p>
+            Where <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>Z</mi><mi>d</mi><mo>∗</mo></msubsup></mrow><annotation encoding="application/x-tex">Z_d^*</annotation></semantics></math> and <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>Z</mi><mi>n</mi><mo>∗</mo></msubsup></mrow><annotation encoding="application/x-tex">Z_n^*</annotation></semantics></math> represent the driving-point and null short-circuit impedances across the cut port, providing seamless duality for series vs parallel circuit modifications.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 / Lecture Notes Gallery & Viewer -->
+    <section class="editorial-section dark-theme" id="notes-archive" aria-labelledby="notes-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">07 / ORIGINAL DOCUMENTATION</span>
+          <h2 id="notes-heading">The 17-Page Technical Lecture Notes:<br><em>Hand-Written Engineering Archive.</em></h2>
+          <p class="lead-subtitle">
+            Explore authentic high-resolution scans of the technical lecture sheets delivered during the DTU ECE workshop.
+          </p>
+        </header>
+
+        <div class="notes-gallery-wrap">
+          <!-- Thumbnail Index -->
+          <div class="notes-thumbnail-list" id="notes-thumb-list" role="group" aria-label="Lecture note pages">
+            <!-- Dynamically populated by JS -->
+          </div>
+
+          <!-- Main Stage View -->
+          <div class="notes-stage-display">
+            <div class="notes-stage-frame" id="notes-stage-frame" title="Click to view full-resolution in lightbox">
+              <img id="notes-stage-img" src="assets/analog-notes-cover.png" alt="Lecture notes sheet 1">
+              <span class="stage-zoom-badge">🔍 Click to Zoom Fullscreen</span>
+            </div>
+            <div class="notes-stage-caption">
+              <div>
+                <h3 id="notes-stage-title">Cover Sheet: Title &amp; Pedagogical Lineage</h3>
+                <p id="notes-stage-desc">Inspired by Late Prof. R. David Middlebrook, Prof. Ali Hajimiri, and Prof. Behzad Razavi. Department of ECE, DTU.</p>
+              </div>
+              <a class="poster-action-btn" href="assets/analog-circuit-notes.pdf" target="_blank" rel="noopener noreferrer">
+                <span>📥</span> Open Full 17-Page PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 / Engineering Reflections & Takeaways -->
+    <section class="editorial-section card-theme" id="takeaways" aria-labelledby="takeaways-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">08 / ENGINEERING REFLECTIONS</span>
+          <h2 id="takeaways-heading">Four Foundational Insights<br><em>from the Workshop.</em></h2>
+          <p class="lead-subtitle">
+            Personal takeaways from experiencing Design-Oriented Analysis as an undergraduate engineering student at DTU.
+          </p>
+        </header>
+
+        <div class="takeaways-masonry">
+          <article class="takeaway-brick">
+            <span class="takeaway-num">TAKEAWAY 01</span>
+            <h3>Design is an Under-Constrained Craft</h3>
+            <p>
+              Classroom problem-solving often tricks students into believing circuits have a single predetermined algebraic answer. In reality, design is inherently under-constrained (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mtext>variables</mtext></msub><mo>&gt;</mo><msub><mi>N</mi><mtext>equations</mtext></msub></mrow><annotation encoding="application/x-tex">N_{\text{variables}} &gt; N_{\text{equations}}</annotation></semantics></math>). Mastery lies in making intelligent engineering choices—sizing bias networks with the 10% rule, preventing source loading, and selecting available standard E24 components.
+            </p>
+          </article>
+
+          <article class="takeaway-brick">
+            <span class="takeaway-num">TAKEAWAY 02</span>
+            <h3>Low-Entropy Expressions Save Sanity</h3>
+            <p>
+              Blindly multiplying out polynomials produces algebraic clutter that buries circuit insight. Keeping transfer functions in low-entropy factored pole-zero format means that every single term in the equation corresponds directly to a physical component or frequency shelf. If an amplifier fails a spec, you immediately know which resistor or capacitor to adjust.
+            </p>
+          </article>
+
+          <article class="takeaway-brick">
+            <span class="takeaway-num">TAKEAWAY 03</span>
+            <h3>Negative Feedback is Nature's Autopilot</h3>
+            <p>
+              Understanding the exponential <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>=</mo><msub><mi>I</mi><mi>S</mi></msub><msup><mi>e</mi><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub><mi mathvariant="normal">/</mi><msub><mi>V</mi><mi>T</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">I_C = I_S e^{V_{BE}/V_T}</annotation></semantics></math> sensitivity demonstrated why simple base resistors lead to thermal runaway. Adding emitter degeneration (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>E</mi></msub></mrow><annotation encoding="application/x-tex">R_E</annotation></semantics></math>) turns the circuit into a self-regulating feedback system: as current tries to surge, emitter voltage rises, choking <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>B</mi><mi>E</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{BE}</annotation></semantics></math> and pinning the operating point with unwavering stability.
+            </p>
+          </article>
+
+          <article class="takeaway-brick">
+            <span class="takeaway-num">TAKEAWAY 04</span>
+            <h3>Middlebrook's EET as an Analytical Superpower</h3>
+            <p>
+              Instead of resolving entire KCL matrices when a bypass capacitor or feedback resistor is introduced, the Extra Element Theorem allows calculating driving-point (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">Z_d</annotation></semantics></math>) and null double-injection (<math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Z</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">Z_n</annotation></semantics></math>) impedances by inspection. It turns what would be three pages of painful algebra into a clean, intuitive transfer function.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 / Document Downloads -->
+    <section class="editorial-section dark-theme" id="downloads" aria-labelledby="downloads-heading">
+      <div class="wrap">
+        <header class="section-lead-header">
+          <span class="section-num">09 / DOCUMENT ARCHIVE</span>
+          <h2 id="downloads-heading">Official Documents &amp;<br><em>Technical Artifacts.</em></h2>
+          <p class="lead-subtitle">
+            Download the official DTU department workshop brochure and the full 17-page handwritten lecture notes.
+          </p>
+        </header>
+
+        <div class="downloads-deck">
+          <!-- Brochure Card -->
+          <article class="download-card">
+            <div class="card-top-indicator">
+              <span class="doc-type-badge">Official Brochure</span>
+              <span class="doc-size">186 KB · PDF</span>
+            </div>
+            <h3>DTU ECE Department Workshop Brochure</h3>
+            <p>
+              The official two-page departmental circular containing the schedule, leadership committee (Prof. Prateek Sharma, Prof. Neeta Pandey, Dr. Anurag Chauhan, Mr. Vinay Kumar), pedagogical vision, and eligibility requirements.
+            </p>
+            <a class="download-btn" href="assets/analog-workshop-brochure.pdf" download="DTU_ECE_Analog_Workshop_Brochure.pdf">
+              <span>📥</span> Download Brochure PDF
+            </a>
+          </article>
+
+          <!-- Lecture Notes Card -->
+          <article class="download-card">
+            <div class="card-top-indicator">
+              <span class="doc-type-badge">Technical Notes</span>
+              <span class="doc-size">1.54 MB · PDF</span>
+            </div>
+            <h3>Complete 17-Page Technical Lecture Notes</h3>
+            <p>
+              The complete original handwritten lecture notes delivered by Mr. Vinay Kumar covering DOA principles, BJT thermal stability, audio amplifier synthesis, and Middlebrook's Extra Element Theorem (EET &amp; DEET).
+            </p>
+            <a class="download-btn" href="assets/analog-circuit-notes.pdf" download="DTU_ECE_Analog_Circuit_Notes_Middlebrook_EET.pdf">
+              <span>📥</span> Download Lecture Notes PDF
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <dialog class="image-lightbox-modal" id="lightbox-modal" aria-modal="true" aria-label="Fullscreen document view">
+    <div class="lightbox-content-box">
+      <button class="lightbox-close-btn" id="lightbox-close" autofocus aria-label="Close fullscreen modal">×</button>
+      <img id="lightbox-img" alt="Fullscreen document preview">
+      <p class="lightbox-caption-text" id="lightbox-caption"></p>
+    </div>
+  </dialog>
+
+  <!-- Footer Navigation -->
+  <footer class="case-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="wordmark" href="index.html" style="font-family:var(--display); font-size:18px; font-weight:800; color:#fff;">
+          AAKASH<span style="color:var(--cyan);">✦</span>
+        </a>
+        <p style="font-size:12px; color:var(--muted); margin:4px 0 0;">
+          B.Tech Electronics &amp; Communication Engineering · Class of 2028 · DTU
+        </p>
+      </div>
+
+      <div class="footer-nav-links">
+        <a href="index.html">Portfolio Home</a>
+        <a href="pcb-designing-bootcamp.html">PCB Bootcamp ↗</a>
+        <a href="#overview">Back to Top ↑</a>
+        <a href="https://github.com/aakash9972sn" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+  </footer>
+<script src="portfolio-data.js?v=20261119-1" defer></script>
+<script src="hosted-ai.js?v=20261120-1"></script>
+<script src="firebase-account.js?v=20261120-auth3" defer></script>
+<script src="ai-config.js?v=20261120-hosted1" defer></script>
+<script src="ai-assistant.js?v=20261120-hosted1" defer></script>
+</body>
+</html>
